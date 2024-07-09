@@ -1,0 +1,97 @@
+html{
+  margin: 0 auto;
+  background-color: #181818;
+  max-width: 600px;
+  padding: 5%;
+}
+h1,h2,h3,h4,h5,h6,p,span,ul,li,label,input,button{
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+}
+h1{
+  text-align: center;
+}
+.todoList{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+}
+.CTodo{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+.CTodo input{
+  width: 66%;
+  padding: 12px 0;
+  border-radius: 0px;
+  background-color: #181818;
+  border: none;
+  border-bottom: solid 2px #67059d;
+}
+.CTodo input:focus-visible{
+  outline: none;
+}
+.CTodo button{
+  padding: 12px 18px;
+  width: auto;
+  transition: .1s;
+  border-radius: 99px;
+  background-color: #67059d;
+  border: solid 2px #67059d;
+}
+.CTodo button:hover{
+  background-color: #47036b;
+  border-color: #47036b;
+}
+.CTodo input, .CTodo button{
+
+  font-size: 16px;
+}
+.RUDLabel{
+  padding-top: 20px;
+}
+.RUDTodo{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.RUDTodo li{
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: left;
+  gap: 10px;
+  word-break: break-all; 
+}
+.RUDTodo li span:hover{
+  color: #888888;
+}
+.RUDTodo li span{
+  text-decoration-color: #67059d!important;
+  text-decoration-thickness: 2px!important;
+  transition: .2s;
+}
+button.deleteButton{
+  background: none;
+  border: none;
+  color: #67059d;
+  font-size: 28px;
+  line-height: 16px;
+  transition: .3s;
+}
+button.deleteButton:hover{
+  color:#FFF
+}
+@media screen and (max-width:720px){
+  .CTodo{
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .CTodo input{
+    width: 100%;
+  }
+  .CTodo button{
+    width: fit-content;
+  }
+}
